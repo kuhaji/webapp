@@ -1,0 +1,59 @@
+body, h1, h2, p, ul, li {
+  align-content: center;
+  border:5px;
+  margin:0;
+  padding:0;
+
+}
+
+
+body {
+  margin: 0 auto;
+  display: block;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 15px;
+}
+
+header, div, form {
+  display: block;
+}
+
+header#banner {
+
+  height: 100px;
+  margin: auto;
+  text-align: center;
+  background-color: #969494;
+
+}
+
+h1{
+  font-size: 20px;
+  color: white;
+  font-weight: bold;
+}
+
+input[type="text"],
+input[type="password"] {
+  border: 1px solid rgb(65, 101, 218);
+  padding: 5px;
+
+
+
+}
+
+.container {
+  max-width: 500px;
+  margin: 0 auto;
+  padding: 20px;
+  background: #e5e5e5;
+}
+
+.users-list ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.users-list ul li {
+  margin-bottom: 10px;
+}

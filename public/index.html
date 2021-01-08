@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+  <link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+
+<body>
+
+<header id="banner">
+  <h1>Webb app</h1>
+</header>
+
+<div class="container">
+  <div class="status"></div>
+
+  <form class="login-form" method="POST">
+    <h3>Login</h3>
+    <p><input type="text" name="username" placeholder="Username"></p>
+    <p><input type="password" name="password" placeholder="Password"></p>
+    <p><input type="submit" value="Login"></p>
+  </form>
+  <hr>
+  <form class="register-form" method="POST">
+    <h3>Register</h3>
+    <p><input id="username" type="text" name="username" placeholder="Username"></p>
+    <p><input id="password" type="password" name="password" placeholder="Password"></p>
+    <p>
+      <label for="role">Role</label>
+      <select id="role" name="role">
+        <option value="basic" selected>Basic</option>
+        <option value="admin">Admin</option>
+      </select>
+    </p>
+    <p><input type="submit" value="Register"></p>
+  </form>
+  <hr>
+
+  <form class="imagepost-form">
+    <h3>Create a new image post</h3>
+    <p>
+      <label for="title">Title</label><br>
+      <input type="text" id="title" name="title">
+    </p>
+    <p>
+      <label for="image">Image</label>
+      <br><input type="file" id="image" name="image">
+    </p>
+    <p>
+      <label for="description">Description</label><br>
+      <textarea id="description" name="description" rows="5"></textarea>
+    </p>
+    <p><input type="submit" value="Send"></p>
+  </form>
+  <div class="uploaded-image-post"></div>
+  <hr>
+  <div class="users-list"></div>
+</div>
+
+<script id="template-users-list" type="text/mustache">
+      <ul>
+        {{#users}}
+        <li>
+          id: {{id}}<br>
+          username: {{username}}<br>
+          role: {{role}}
+        </li>
+        {{/users}}
+      </ul>
+    </script>
+
+<script id="template-image-post" type="text/mustache">
+      <div class="image-post">
+        <p>{{title}}</p>
+        <img src="{{imageUrl}}" alt="{{title}}">
+        <p>{{description}}</p>
+      </div>
+    </script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mustache.js/4.1.0/mustache.min.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>
